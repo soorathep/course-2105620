@@ -1,0 +1,109 @@
+{
+  "verified_at": "2026-11-15T17:38:28.775192+07:00",
+  "owner_authorized_scope": "Move and remove only course2105620 from Test, confirmed2026-11-15",
+  "dedicated_repository": "soorathep/course-2105620",
+  "feature_commit": "5b64f578ce7bc01eec03b6b48ce791901958d320",
+  "feature_Pages_run": 43704380229,
+  "feature_Pages_status": "success",
+  "cleanup_repository": "soorathep/Test",
+  "cleanup_commit": "f68a043bb9b592002a2931e0a05aebaa0e456f27",
+  "cleanup_Pages_run": 43704598094,
+  "cleanup_Pages_status": "success",
+  "Test_main_at_verification": "f68a043bb9b592002a2931e0a05aebaa0e456f27",
+  "original_files_verified_sha256": 267,
+  "original_file_bytes": 29155413,
+  "remaining_course_files_in_Test_current_tree": [],
+  "media": [
+    {
+      "tag": "2105620-review90-20261111",
+      "source_release_id": 441351386,
+      "source_asset_id": 734577578,
+      "name": "review90_narration.m4a",
+      "bytes": 43015184,
+      "sha256": "7b1d18a497f6d04c31efb665db493a212ed87571a72a10058c24b9f4fd515690",
+      "source_url": "https://github.com/soorathep/Test/releases/download/2105620-review90-20261111/review90_narration.m4a",
+      "destination_url": "https://github.com/soorathep/course-2105620/releases/download/2105620-review90-20261111/review90_narration.m4a",
+      "source_verified": true,
+      "destination_readback_verified": true,
+      "destination_release_id": 445970857,
+      "destination_asset_id": 750616465,
+      "source_release_and_tag_removed": true
+    },
+    {
+      "tag": "2105620-review90-20261111-r2",
+      "source_release_id": 441372210,
+      "source_asset_id": 734626969,
+      "name": "review90_narration.m4a",
+      "bytes": 42994270,
+      "sha256": "cc4295018d0564b10e76dbb7c45aaa6f5042586fa23562a0df176c6f259dccf6",
+      "source_url": "https://github.com/soorathep/Test/releases/download/2105620-review90-20261111-r2/review90_narration.m4a",
+      "destination_url": "https://github.com/soorathep/course-2105620/releases/download/2105620-review90-20261111-r2/review90_narration.m4a",
+      "source_verified": true,
+      "destination_readback_verified": true,
+      "destination_release_id": 445970933,
+      "destination_asset_id": 750616862,
+      "source_release_and_tag_removed": true
+    }
+  ],
+  "shared_release_preserved": 436845650,
+  "shared_release_asset_count_preserved": 31,
+  "main_site_and_other_course_runtime_preserved": true,
+  "browser_verification": {
+    "dedicated_week4_form": "correctpromptandOnmyownmode",
+    "dedicated_audio": "playingadvanced23seconds, duration5618.730667, noerror",
+    "legacy_review": "redirectedwithqueryandreview90-planfragmentpreserved",
+    "legacy_PDF": "redirectedtodedicatedPDFpreservingquery",
+    "legacy_no_slash_root": "redirectedtodedicatedcoursehome"
+  },
+  "HTTP_checks": [
+    {
+      "url": "https://www.skhgroup.net/",
+      "http_status": 200,
+      "expected": 200
+    },
+    {
+      "url": "https://www.skhgroup.net/teaching/",
+      "http_status": 200,
+      "expected": 200
+    },
+    {
+      "url": "https://www.skhgroup.net/teaching/2105620/review90.html?migration-check=20261115",
+      "http_status": 404,
+      "expected": 404
+    },
+    {
+      "url": "https://www.skhgroup.net/teaching/2105620/files/w01-slides.pdf?migration-check=20261115",
+      "http_status": 404,
+      "expected": 404
+    },
+    {
+      "url": "https://soorathep.github.io/course-2105620/teaching/2105620/",
+      "http_status": 200,
+      "expected": 200
+    },
+    {
+      "url": "https://soorathep.github.io/course-2105620/teaching/2105620/exit.html?s=14",
+      "http_status": 200,
+      "expected": 200
+    }
+  ],
+  "legacy_limits": [
+    "Legacy skhgroup requests retain HTTP404 before browser JavaScript redirects; non-JavaScript clients and embedded subresource fetches need dedicated URLs.",
+    "Retired direct github.com/soorathep/Test Release URLs no longer work; use the dedicated Release URLs."
+  ],
+  "test_summary": {
+    "frontend_mocked_cases": 22,
+    "frontend_static_checks": 4,
+    "routing_cases": 62,
+    "preserved_download_mappings": 23,
+    "QR_codes": 14,
+    "weekly_closing_slides": 9,
+    "live_page_URLs": 27,
+    "live_resources": 131,
+    "broken_new_site_links": 0,
+    "production_feedback_submissions": 0,
+    "student_responses_read": false
+  },
+  "Git_history_rewritten": false,
+  "NFS_or_Zenodo_publication_performed": false
+}

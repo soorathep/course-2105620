@@ -39,6 +39,9 @@
     "scope": "Course2105620 only; main research website, other courses and shared releases excluded",
     "destination_verification": "267 original files matched by SHA-256; both audio editions downloaded and read-back verified",
     "legacy_course_links": "Main-site404browserredirectpreservespath/query/hash; HTTPstatusremains404",
-    "legacy_Test_release_urls": "Retired afterverifiedtransfer; use dedicated media URLs"
+    "legacy_Test_release_urls": "Retired afterverifiedtransfer; use dedicated media URLs",
+    "status": "verified",
+    "cleanup_commit": "f68a043bb9b592002a2931e0a05aebaa0e456f27",
+    "verification_receipt": "_teaching-src/2105620/migration/20261115-cleanup-receipt.json"
   }
 }
