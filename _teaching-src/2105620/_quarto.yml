@@ -4,6 +4,8 @@ project:
   render:
     - "*.qmd"
   resources:
+    - exit.html
+    - exit-prompts.json
     - assets/**
 
 website:

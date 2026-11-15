@@ -13,15 +13,18 @@ These rules add to the account lab standards.
 - Never change an existing remote without first understanding its purpose.
   In particular, the shared Test repository still serves the research website
   and other courses. It is not an interchangeable course checkout.
-- `COURSE_PUBLISHING.json` records the verified destination and legacy media.
+- `COURSE_PUBLISHING.json` records the verified destination and media.
 
 ## Preserve student materials
 
 - Preserve `teaching/2105620/`, editable `_teaching-src/2105620/`, shared runtime
   assets, videos, downloads, feedback links and their current functionality.
-- The old skhgroup.net pages and Test-hosted media remain compatibility
-  resources. Check the impact and get explicit user approval before removing
-  or redirecting them. Existing verified links may remain; new uploads go here.
+- On 2026-11-15 the owner explicitly authorized moving and deleting only course
+  2105620 from Test after SHA-256 destination verification, including both audio
+  Releases. Old skhgroup.net course links use a narrow main-site 404 browser
+  redirect. Dedicated URLs are required for automated downloads and media.
+  Preserve the main site, other courses, shared releases and local originals.
+  Do not restore retired Test media links or rewrite shared Git history.
 - Feedback forms may depend on their original authorized origin. Do not change
   a backend, origin, form action or authentication policy merely to change a URL.
   Test form loading without submitting entries or reading student responses.

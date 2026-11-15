@@ -499,4 +499,4 @@ Start with one example. Change a single element and check its effect.
 11:56–11:57 แนะนำให้กลับมาเลือกgalleryหนึ่งแบบหลังคาบ มีnotebookให้รันและข้อมูลสมมติแยกชุด สงวน11:57–12:00สำหรับfeedbackหน้าถัดไป
 :::
 
-{{< include _feedback-w08-10.qmd >}}
+{{< include _exit-w09.qmd >}}

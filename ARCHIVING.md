@@ -55,15 +55,17 @@ links, a GitHub source ZIP, or a Git LFS pointer is not a complete snapshot.
 Record each external file's original URL, retrieval date, local path, byte count,
 and SHA-256. Check that it is the intended version and that it may be included.
 
-The known 2026 review audio is an external compatibility dependency:
+The known 2026 review audio is an external dedicated-Release dependency:
 
-- URL: `https://github.com/soorathep/Test/releases/download/2105620-review90-20261111-r2/review90_narration.m4a`
+- URL: `https://github.com/soorathep/course-2105620/releases/download/2105620-review90-20261111-r2/review90_narration.m4a`
 - Size: 42,994,270 bytes.
 - SHA-256: `cc4295018d0564b10e76dbb7c45aaa6f5042586fa23562a0df176c6f259dccf6`.
 
 Re-inventory the actual media used by the selected annual edition. Do not assume
-that this baseline remains the current recording in later years. Existing legacy
-URLs stay working; new course media are published through the dedicated repository.
+that this baseline remains the current recording in later years. Both 2026
+recordings are preserved in the dedicated repository's Releases. The owner
+authorized retiring their Test-hosted copies after checksum verification on
+2026-11-15; use the dedicated URLs in current material and annual inventories.
 
 If a required file is missing, inaccessible, or not cleared for redistribution,
 mark the package **incomplete** and report the gap. State which dependencies are

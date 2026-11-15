@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>2105620 · Exit ticket and feedback</title>
+<style>
+@font-face { font-family: "Course Thai"; src: url("../shared/fonts/Sarabun-Regular.ttf") format("truetype"); font-display: swap; }
+:root { --teal: #0F6E6B; --amber: #E29A2D; --graphite: #333F4A; --slate: #66727C; --mist: #B9C1C6; --paper: #F3F0EB; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--graphite); font: 17px/1.5 "Source Sans 3", "Helvetica Neue", Arial, "Course Thai", sans-serif; }
+main { max-width: 680px; margin: 0 auto; padding: 24px 18px 48px; }
+a { color: var(--teal); text-underline-offset: .15em; }
+nav { margin-bottom: 18px; }
+.course { color: var(--slate); font-size: .9rem; margin: 0; }
+h1 { font-family: "Source Serif 4", Georgia, serif; font-size: 1.6rem; line-height: 1.2; margin: .3em 0 .5em; }
+.lede { margin: 0 0 1.2em; }
+.th { display: block; color: var(--slate); font-size: .9em; font-family: "Course Thai", sans-serif; font-weight: 400; }
+form > div, fieldset { background: #fff; border: 1px solid var(--mist); border-radius: 6px; padding: 14px 16px; margin: 0 0 12px; }
+fieldset { min-width: 0; }
+legend, label.q { font-weight: 600; display: block; margin-bottom: 6px; padding: 0; }
+legend { float: left; width: 100%; }
+legend + * { clear: both; }
+.prompt { border-left: 4px solid var(--amber); padding-left: 10px; margin: 0 0 10px; font-family: "Source Serif 4", Georgia, serif; }
+textarea, select { width: 100%; min-height: 44px; font: inherit; padding: 9px 10px; border: 1px solid var(--mist); border-radius: 4px; background: #fff; color: var(--graphite); }
+textarea { min-height: 110px; resize: vertical; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.opts label { min-height: 44px; display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--mist); border-radius: 4px; padding: 7px 11px; cursor: pointer; }
+.opts input { accent-color: var(--teal); }
+.opts label:has(input:checked) { border-color: var(--teal); background: #e7f1f0; }
+.optional, .hint { color: var(--slate); font-weight: 400; font-size: .9em; }
+.hint { margin: 8px 0 0; }
+button { width: 100%; min-height: 48px; font: inherit; font-weight: 600; background: var(--teal); color: #fff; border: 0; border-radius: 4px; padding: 14px; cursor: pointer; }
+button:disabled { opacity: .65; cursor: wait; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible { outline: 3px solid var(--graphite); outline-offset: 3px; }
+form > .status { margin-top: 12px; min-height: 1.4em; background: none; border: 0; padding: 0; }
+form > .status.ok { background: #e7f1f0; border-left: 4px solid var(--teal); padding: 12px 14px; }
+form > .status.err, form > .status.offline { background: #fff4de; border-left: 4px solid var(--amber); padding: 12px 14px; }
+.privacy, .previous { font-size: .88rem; margin-top: 18px; }
+.hp { position: absolute; left: -5000px; width: 1px; height: 1px; overflow: hidden; }
+noscript p { border-left: 4px solid var(--amber); padding: 12px; background: #fff; }
+@media (max-width: 380px) { main { padding-right: 12px; padding-left: 12px; } form > div, fieldset { padding: 12px; } }
+</style>
+</head>
+<body>
+<main>
+  <nav aria-label="Course"><a href="./">Back to the course</a></nav>
+  <p class="course">2105620 Research Communication Skills for Chemical Engineers</p>
+  <h1>Exit ticket and feedback <span class="th" lang="th">ตอบคำถามท้ายคาบและให้ความเห็น</span></h1>
+  <p class="lede">About 3 minutes. Answer in Thai or English. The week, study mode and exit-ticket answer are required. All feedback questions are optional.</p>
+  <noscript><p>This form needs JavaScript to show the weekly question and send your answer. Enable JavaScript, or tell the instructor that you could not submit. No answer has been sent.</p></noscript>
+
+  <form id="f" method="post" novalidate>
+    <div>
+      <label class="q" for="session">Week <span class="th" lang="th">สัปดาห์ที่เรียน</span></label>
+      <select id="session" name="session" required aria-describedby="session-hint"><option value="">Choose a week / เลือกสัปดาห์</option></select>
+      <p class="hint" id="session-hint">Check the week before sending, especially when reviewing on your own.</p>
+    </div>
+    <fieldset>
+      <legend>Where are you answering from? <span class="th" lang="th">ตอบจากที่ไหน</span></legend>
+      <div class="opts"><label><input type="radio" name="mode" value="In class" required checked> In class</label><label><input type="radio" name="mode" value="On my own" required> On my own (self-study)</label></div>
+    </fieldset>
+    <div>
+      <label class="q" for="exit_ticket">Exit ticket <span class="th" lang="th">คำถามท้ายคาบ</span></label>
+      <p class="prompt" id="prompt" aria-live="polite"></p>
+      <textarea id="exit_ticket" name="exit_ticket" maxlength="3000" required aria-describedby="prompt answer-hint"></textarea>
+      <p class="hint" id="answer-hint">Up to 3,000 characters. Describe your reasoning briefly. Please leave out names and identifying details.</p>
+    </div>
+    <fieldset>
+      <legend>How was the pace today? <span class="optional">optional</span><span class="th" lang="th">ความเร็วของคาบนี้</span></legend>
+      <div class="opts"><label><input type="radio" name="pace" value="Too slow"> Too slow</label><label><input type="radio" name="pace" value="About right"> About right</label><label><input type="radio" name="pace" value="Too fast"> Too fast</label></div>
+    </fieldset>
+    <fieldset>
+      <legend>How confident are you about today's learning task? <span class="optional">optional</span><span class="th" lang="th">มั่นใจว่าจะทำงานของคาบนี้ได้ด้วยตนเองแค่ไหน (1 = ยังทำไม่ได้, 5 = มั่นใจ)</span></legend>
+      <div class="opts"><label><input type="radio" name="confidence" value="1"> 1</label><label><input type="radio" name="confidence" value="2"> 2</label><label><input type="radio" name="confidence" value="3"> 3</label><label><input type="radio" name="confidence" value="4"> 4</label><label><input type="radio" name="confidence" value="5"> 5</label></div>
+    </fieldset>
+    <fieldset>
+      <legend>Did the notebook or lab work on your device? <span class="optional">optional</span><span class="th" lang="th">notebook หรือ lab ใช้งานได้บนเครื่องของคุณไหม ถ้าคาบนี้ไม่ได้ใช้ เลือก Not used</span></legend>
+      <div class="opts"><label><input type="radio" name="lab" value="Yes"> Yes</label><label><input type="radio" name="lab" value="Partly"> Partly</label><label><input type="radio" name="lab" value="No, I need help"> No, I need help</label><label><input type="radio" name="lab" value="Not used"> Not used</label></div>
+    </fieldset>
+    <div>
+      <label class="q" for="unclear">What is still unclear? <span class="optional">optional</span><span class="th" lang="th">ยังไม่เข้าใจตรงไหน</span></label>
+      <textarea id="unclear" name="unclear" maxlength="3000"></textarea>
+    </div>
+    <div>
+      <label class="q" for="change">One thing you would change about today? <span class="optional">optional</span><span class="th" lang="th">อยากให้ปรับอะไรหนึ่งอย่าง</span></label>
+      <textarea id="change" name="change" maxlength="3000"></textarea>
+    </div>
+    <div class="hp" aria-hidden="true"><label for="website">Leave this field blank</label><input id="website" type="text" name="website" tabindex="-1" autocomplete="off"></div>
+    <button type="submit" id="send" disabled>Send answer</button>
+    <div class="status" id="status" role="status" aria-live="polite" aria-atomic="true"></div>
+  </form>
+  <p class="privacy">This form does not request your name, student ID or email. Please avoid identifying details in your answer. Responses are saved in the instructor's private GitHub repository and used to improve teaching. Cloudflare and GitHub process requests to deliver this service.<span class="th" lang="th">ไม่ต้องระบุชื่อ รหัสนิสิต หรืออีเมล และโปรดไม่ใส่ข้อมูลที่ระบุตัวบุคคลในข้อความ คำตอบเก็บใน repository ส่วนตัวของผู้สอน</span></p>
+  <p class="previous"><a href="https://oxidized-challenge-ed9.notion.site/72d3292e91134946aa02305656afd9d5" target="_blank" rel="noopener noreferrer">Previous weekly feedback form (Notion)</a>. This is the previous form, separate from the exit ticket above.</p>
+</main>
+<!-- Generated from adjacent exit-prompts.json. Keep the embedded JSON byte-for-byte in sync when rebuilding this form. -->
+<script id="exit-prompts" type="application/json">
+{
+  "1": "Choose an article type for your research. State its purpose and explain why it fits the contribution you want to communicate.",
+  "2": "Describe one intended use of generative AI in research writing. State what you would disclose and what you remain responsible for checking.",
+  "3": "State your research question and one search string you could reuse. Explain one comparison your evidence matrix will help you make.",
+  "4": "Give one paragraph’s function from your reverse outline. Identify one break in the paper’s argument and explain how the outline reveals it.",
+  "5": "Write one gap statement and one testable aim. Name the measurement that would answer the aim.",
+  "6": "Give one example of reporting a result and one example of interpreting it. Identify one figure feature you would check before accepting the claim.",
+  "7": "Answer the exit-ticket question shown by your instructor. If no question was provided, state one useful learning point and one question you still have.",
+  "8": "State one finding supported by today’s data and one conclusion the data cannot establish. Explain one revision you made to your Results paragraph or caption.",
+  "9": "State what your error bars represent and which experimental runs produced them. Explain one design choice and one check that shows your figure can be recreated.",
+  "10": "Give one revision that makes your conclusion match the evidence. Propose a follow-up experiment and an outcome that would challenge your explanation.",
+  "11": "Answer the exit-ticket question shown by your instructor. If no question was provided, state one useful learning point and one question you still have.",
+  "12": "Answer the exit-ticket question shown by your instructor. If no question was provided, state one useful learning point and one question you still have.",
+  "13": "Answer the exit-ticket question shown by your instructor. If no question was provided, state one useful learning point and one question you still have.",
+  "14": "Answer the exit-ticket question shown by your instructor. If no question was provided, state one useful learning point and one question you still have."
+}
+</script>
+<script id="exit-form-script">
+"use strict";
+// Shared relay source and tools live in the private soorathep/course-feedback repository.
+const RELAY_URL = "https://course-feedback-relay.ecs-thailand-election.workers.dev/";
+const COURSE = "2105620";
+const TOTAL = 14;
+const PROMPTS = JSON.parse(document.getElementById("exit-prompts").textContent);
+const $ = (id) => document.getElementById(id);
+const form = $("f");
+const modeInputs = Array.from(form.querySelectorAll('input[name="mode"]'));
+const validWeek = (value) => /^[1-9]\d*$/.test(String(value)) && Number(value) <= TOTAL;
+const status = (message, kind = "") => {
+  $("status").textContent = message;
+  $("status").className = "status " + kind;
+};
+const setPrompt = () => {
+  const week = $("session").value;
+  $("prompt").textContent = validWeek(week) ? PROMPTS[week] : "Choose the week to see its exit-ticket question.";
+};
+const setDefaultMode = () => {
+  const defaultMode = $("session").value === "4" ? "On my own" : "In class";
+  for (const input of modeInputs) input.checked = input.value === defaultMode;
+};
+for (let week = 1; week <= TOTAL; week++) $("session").add(new Option("Week " + week, String(week)));
+const queryWeeks = new URLSearchParams(location.search).getAll("s");
+if (queryWeeks.length === 1 && validWeek(queryWeeks[0])) {
+  $("session").value = queryWeeks[0];
+} else if (queryWeeks.length) {
+  status("The link does not identify a valid week. Please choose Week 1 to 14 before sending.", "err");
+}
+setPrompt();
+setDefaultMode();
+$("session").addEventListener("change", () => {
+  setPrompt();
+  setDefaultMode();
+  status("");
+});
+let inFlight = false;
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  if (inFlight) return;
+  const body = Object.fromEntries(new FormData(form).entries());
+  if (!validWeek(body.session)) {
+    status("Please choose the week you studied before sending.", "err");
+    $("session").focus();
+    return;
+  }
+  if (!["In class", "On my own"].includes(body.mode)) {
+    status("Please choose In class or On my own.", "err");
+    modeInputs[0].focus();
+    return;
+  }
+  if (typeof body.exit_ticket !== "string" || !body.exit_ticket.trim()) {
+    status("Please answer the exit-ticket question first.", "err");
+    $("exit_ticket").focus();
+    return;
+  }
+  for (const name of ["exit_ticket", "unclear", "change"]) {
+    if (typeof body[name] === "string" && body[name].length > 3000) {
+      status("Each text answer must contain 3,000 characters or fewer.", "err");
+      $(name).focus();
+      return;
+    }
+  }
+  if (navigator.onLine === false) {
+    status("You are offline. Keep this tab open and send when connected. Your answers have not been sent.", "offline");
+    return;
+  }
+  body.course = COURSE;
+  body.session = Number(body.session);
+  const selectedWeek = String(body.session);
+  const selectedMode = body.mode;
+  const controls = Array.from(form.querySelectorAll("input, textarea, select, button"));
+  const disabledStates = controls.map(control => control.disabled);
+  inFlight = true;
+  for (const control of controls) control.disabled = true;
+  form.setAttribute("aria-busy", "true");
+  status("Sending. Please keep this tab open.");
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 20000);
+  try {
+    const response = await fetch(RELAY_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+      signal: controller.signal
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || result.ok !== true) {
+      throw new Error(result.error || "The server did not confirm that your answer was saved.");
+    }
+    form.reset();
+    $("session").value = selectedWeek;
+    for (const input of modeInputs) input.checked = input.value === selectedMode;
+    setPrompt();
+    status("Response received. Thank you. ได้รับคำตอบแล้ว ขอบคุณครับ", "ok");
+  } catch (error) {
+    const message = error.name === "AbortError" || error instanceof TypeError
+      ? "The connection was interrupted, so receipt could not be confirmed. Keep your answers here and check your connection before retrying to avoid a duplicate."
+      : error.message + " Your answers remain in this tab. Please try again.";
+    status(message, "err");
+  } finally {
+    clearTimeout(timeout);
+    controls.forEach((control, index) => { control.disabled = disabledStates[index]; });
+    form.removeAttribute("aria-busy");
+    inFlight = false;
+  }
+});
+// Enable sending only after the JSON handler is attached; no-JavaScript forms stay inactive.
+$("send").disabled = false;
+</script>
+</body>
+</html>

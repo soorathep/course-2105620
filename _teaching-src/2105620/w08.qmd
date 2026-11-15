@@ -382,4 +382,4 @@ The measurements show a conversion–selectivity trade-off within the tested ran
 11:50–11:57 ให้อธิบายหนึ่งประโยคที่เปลี่ยนหลัง peer review และเก็บงานก่อนเปิด feedback ช่วง 11:57–12:00
 :::
 
-{{< include _feedback-w08-10.qmd >}}
+{{< include _exit-w08.qmd >}}

@@ -9,14 +9,7 @@
   "legacy_course_url": "https://www.skhgroup.net/teaching/2105620/",
   "legacy_resources_require_approval_to_remove_or_redirect": true,
   "new_media_release_repository": "soorathep/course-2105620",
-  "verified_legacy_media": [
-    {
-      "url": "https://github.com/soorathep/Test/releases/download/2105620-review90-20261111-r2/review90_narration.m4a",
-      "bytes": 42994270,
-      "sha256": "cc4295018d0564b10e76dbb7c45aaa6f5042586fa23562a0df176c6f259dccf6",
-      "purpose": "Existing review narration, preserved for compatibility and annual archive completeness"
-    }
-  ],
+  "verified_legacy_media": [],
   "annual_archive": {
     "policy": "ARCHIVING.md",
     "prepare_at": "academic-year end, using the owner's confirmed year and cutoff",
@@ -26,5 +19,26 @@
     "checksums": "SHA-256",
     "doi_link_requires_verified_version_specific_doi": true,
     "automatic_zenodo_publication": false
+  },
+  "verified_media": [
+    {
+      "url": "https://github.com/soorathep/course-2105620/releases/download/2105620-review90-20261111/review90_narration.m4a",
+      "bytes": 43015184,
+      "sha256": "7b1d18a497f6d04c31efb665db493a212ed87571a72a10058c24b9f4fd515690",
+      "purpose": "Preserved prior review narration edition"
+    },
+    {
+      "url": "https://github.com/soorathep/course-2105620/releases/download/2105620-review90-20261111-r2/review90_narration.m4a",
+      "bytes": 42994270,
+      "sha256": "cc4295018d0564b10e76dbb7c45aaa6f5042586fa23562a0df176c6f259dccf6",
+      "purpose": "Current review narration"
+    }
+  ],
+  "legacy_cleanup_authorization": {
+    "date": "2026-11-15",
+    "scope": "Course2105620 only; main research website, other courses and shared releases excluded",
+    "destination_verification": "267 original files matched by SHA-256; both audio editions downloaded and read-back verified",
+    "legacy_course_links": "Main-site404browserredirectpreservespath/query/hash; HTTPstatusremains404",
+    "legacy_Test_release_urls": "Retired afterverifiedtransfer; use dedicated media URLs"
   }
 }

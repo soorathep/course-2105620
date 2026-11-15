@@ -141,10 +141,26 @@ a page read at arm's length.
 cp w01.qmd w03.qmd
 ```
 
-Edit the front matter and body, and keep the last line —
-`{{< include _feedback.qmd >}}` — so the closing QR slide is added
-automatically. One QR serves all fourteen weeks; the feedback form separates
-sessions by submission time.
+Edit the front matter and body. Set the final include to the matching week,
+for example `{{< include _exit-w03.qmd >}}`. Each closing slide has its own QR
+and direct link to `exit.html?s=3`, so the week is explicit in the form.
+
+`exit-prompts.json` supplies both the form questions and generated closing
+slides. After changing a question, run the absolute research interpreter:
+
+```bash
+"$HOME/.venvs/research/bin/python" figures/make_exit_qr.py
+```
+
+The generator writes fourteen QR images and closing includes for the nine
+available weekly decks. Sessions 7 and 11–14 use an instructor-question fallback
+until matching teaching material is supplied. Preserve the existing closing
+fragment IDs recorded in the generator. Keep `exit.html` and
+`exit-prompts.json` in Quarto resources. See [the feedback guide](../../FEEDBACK.md)
+for publication, verification and privacy requirements.
+
+The earlier Notion form and its QR remain compatibility resources. The new
+form provides a link to the previous form; keep the original asset unchanged.
 
 Then add the week to `_data/rcs2026.yml` with `slides: w03.html`, and the link
 appears on the course page by itself.

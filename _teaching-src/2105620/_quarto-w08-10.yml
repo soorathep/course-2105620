@@ -2,5 +2,7 @@
 project:
   lib-dir: w08-10_libs
   resources:
+    - exit.html
+    - exit-prompts.json
     - assets/**
     - files/**

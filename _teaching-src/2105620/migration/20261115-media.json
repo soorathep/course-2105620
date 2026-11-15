@@ -1,0 +1,40 @@
+{
+  "source_repository": "soorathep/Test",
+  "destination_repository": "soorathep/course-2105620",
+  "original_Test_commit": "78755f20c77e6ac5845415aca03b05f3ae582c2f",
+  "dedicated_verified_baseline": "88f0cbddf219ca8b173e8f2796f66c71b9b29112",
+  "original_course_files": 267,
+  "original_course_bytes": 29155413,
+  "media": [
+    {
+      "tag": "2105620-review90-20261111",
+      "source_release_id": 441351386,
+      "source_asset_id": 734577578,
+      "name": "review90_narration.m4a",
+      "bytes": 43015184,
+      "sha256": "7b1d18a497f6d04c31efb665db493a212ed87571a72a10058c24b9f4fd515690",
+      "source_url": "https://github.com/soorathep/Test/releases/download/2105620-review90-20261111/review90_narration.m4a",
+      "destination_url": "https://github.com/soorathep/course-2105620/releases/download/2105620-review90-20261111/review90_narration.m4a",
+      "source_verified": true,
+      "destination_readback_verified": true,
+      "destination_release_id": 445970857,
+      "destination_asset_id": 750616465
+    },
+    {
+      "tag": "2105620-review90-20261111-r2",
+      "source_release_id": 441372210,
+      "source_asset_id": 734626969,
+      "name": "review90_narration.m4a",
+      "bytes": 42994270,
+      "sha256": "cc4295018d0564b10e76dbb7c45aaa6f5042586fa23562a0df176c6f259dccf6",
+      "source_url": "https://github.com/soorathep/Test/releases/download/2105620-review90-20261111-r2/review90_narration.m4a",
+      "destination_url": "https://github.com/soorathep/course-2105620/releases/download/2105620-review90-20261111-r2/review90_narration.m4a",
+      "source_verified": true,
+      "destination_readback_verified": true,
+      "destination_release_id": 445970933,
+      "destination_asset_id": 750616862
+    }
+  ],
+  "user_authorized_cleanup": "2105620 only, 2026-11-15",
+  "cleanup_execution_receipt": "Recorded separately after deployment and removal verification"
+}
