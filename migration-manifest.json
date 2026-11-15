@@ -1,0 +1,17 @@
+{
+  "source_repository": "soorathep/Test",
+  "source_commit": "5bce57d3705dc6f88f06607c7ef4b6760692c370",
+  "course": "2105620",
+  "preserved_source_paths": [
+    "teaching/2105620",
+    "teaching/shared",
+    "_teaching-src/2105620",
+    "_teaching-src/shared",
+    "assets",
+    "_layouts",
+    "_includes",
+    "_data",
+    "favicon.png",
+    "og.png"
+  ]
+}
