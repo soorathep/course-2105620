@@ -91,4 +91,6 @@ exclude:
 
   - README.md
   - ARCHIVING.md
+  - AGENTS.md
+  - COURSE_PUBLISHING.json
   - migration-manifest.json

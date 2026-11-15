@@ -1,0 +1,30 @@
+{
+  "course_code": "2105620",
+  "repository": "soorathep/course-2105620",
+  "default_branch": "main",
+  "pages_url": "https://soorathep.github.io/course-2105620/",
+  "course_url": "https://soorathep.github.io/course-2105620/teaching/2105620/",
+  "public_directory": "teaching/2105620",
+  "editable_source_directory": "_teaching-src/2105620",
+  "legacy_course_url": "https://www.skhgroup.net/teaching/2105620/",
+  "legacy_resources_require_approval_to_remove_or_redirect": true,
+  "new_media_release_repository": "soorathep/course-2105620",
+  "verified_legacy_media": [
+    {
+      "url": "https://github.com/soorathep/Test/releases/download/2105620-review90-20261111-r2/review90_narration.m4a",
+      "bytes": 42994270,
+      "sha256": "cc4295018d0564b10e76dbb7c45aaa6f5042586fa23562a0df176c6f259dccf6",
+      "purpose": "Existing review narration, preserved for compatibility and annual archive completeness"
+    }
+  ],
+  "annual_archive": {
+    "policy": "ARCHIVING.md",
+    "prepare_at": "academic-year end, using the owner's confirmed year and cutoff",
+    "publish_requires_explicit_approval": true,
+    "personal_data_review_required": true,
+    "third_party_rights_review_required": true,
+    "checksums": "SHA-256",
+    "doi_link_requires_verified_version_specific_doi": true,
+    "automatic_zenodo_publication": false
+  }
+}

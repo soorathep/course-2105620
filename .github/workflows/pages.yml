@@ -25,7 +25,7 @@ jobs:
           if [ -f teaching/2105623/milp/slides.qmd ]; then sudo cp teaching/2105623/milp/slides.qmd _site/teaching/2105623/milp/slides.qmd; fi
       - name: Project-site links and size check
         run: |
-          sudo python3 tools/fix_site_links.py course-2105620 2105620
+          sudo /usr/bin/python3 tools/fix_site_links.py course-2105620 2105620
           size=$(du --apparent-size --block-size=1 --summarize _site | cut -f1)
           echo "Published site size: $size bytes"
           test "$size" -le 1000000000
